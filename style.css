@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  backdrop-filter: blur(3px);
+  background: url(./photo/La\ toile.jpg);
+  background-position: center center;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  height: 80px;
+  width: 90vw;
+  background: rgba(60, 60, 60, 0.76);
+  margin-top: 40px;
+  border-radius: 300px 50px;
+}
+.title {
+  margin: auto;
+  display: flex;
+}
+.hamburger {
+  margin: auto 20px;
+  color: whitesmoke;
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+}
+h1 {
+  padding: 10px;
+  color: whitesmoke;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.nav-content {
+  margin: auto;
+
+  font-size: 24px;
+}
+
+.nav-content a {
+  margin-right: 30px;
+  color: whitesmoke;
+  text-transform: uppercase;
+  transition: 0.4s ease-in-out;
+}
+
+.nav-content a:hover,
+.nav-left a:hover {
+  color: rgba(255, 137, 73, 0.611);
+}
+
+header {
+  display: flex;
+  height: 400px;
+  width: 90%;
+  background: rgba(60, 60, 60, 0.76);
+  margin: 40px auto;
+  border-radius: 20px;
+}
+.photo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 30%;
+  height: 100%;
+}
+.photo h2 {
+  color: whitesmoke;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+.description {
+  display: flex;
+  text-align: justify;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+
+  width: 70%;
+  height: 100%;
+  color: whitesmoke;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.photo img {
+  height: 320px;
+  width: 320px;
+  border-radius: 1000px;
+}
+
+.nav-left {
+  position: absolute;
+  z-index: 10;
+  height: 100vh;
+  width: 50%;
+  background: rgba(245, 245, 245, 0.495);
+  backdrop-filter: blur(3px);
+  margin-left: -100%;
+  transition: all 0.4s ease;
+}
+
+.mobile-menu {
+  margin: 0;
+}
+
+.mobile-menu-off {
+  margin-left: -100%;
+}
+
+.nav-left a {
+  display: flex;
+  margin: 20px 10px;
+  font-size: 2rem;
+  transition: 0.4s ease-in-out;
+  text-transform: uppercase;
+  color: whitesmoke;
+}
+@media screen and (max-width: 1320px) {
+  header {
+    display: block;
+    height: auto;
+  }
+  .photo {
+    width: 100%;
+    /* margin: 20px 0; */
+  }
+
+  .photo img {
+    margin: 20px 0;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .description {
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    backdrop-filter: blur(5px);
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  .nav-content {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .photo img {
+    height: 250px;
+    width: 250px;
+  }
+  .nav-left a {
+    font-size: 1.5rem;
+  }
+}
