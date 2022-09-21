@@ -201,10 +201,10 @@ footer {
 
 form {
   display: grid;
-  height: 100%;
-  width: 70%;
+  height: 70%;
+  width: 60%;
   margin: auto;
-  grid-template-columns: 10% 10%;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 10% 80% 10%;
   grid-template-areas:
     "nom prenom"
@@ -215,8 +215,15 @@ form {
 textarea {
   grid-area: area;
   display: block;
-  margin: auto;
+
   resize: none;
+}
+
+input {
+  width: 150px;
+  height: 50px;
+  margin: auto;
+  padding: 10px;
 }
 
 #nom {
@@ -229,6 +236,7 @@ textarea {
 
 #submit {
   grid-area: submit;
+  border-radius: 300px;
 }
 
 @keyframes anim {
