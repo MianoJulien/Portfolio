@@ -189,7 +189,8 @@ header {
   width: 50%;
   background: rgba(172, 255, 47, 0.684);
   transform: scaleY(0);
-  animation: anim 15s 0.5s ease-in forwards alternate;
+  animation: anim 5s 0.5s ease-in-out;
+  animation-iteration-count: 100;
   transform-origin: bottom;
 }
 
@@ -214,9 +215,8 @@ form {
 
 textarea {
   grid-area: area;
-  display: block;
-
   resize: none;
+  padding: 10px;
 }
 
 input {
@@ -278,6 +278,12 @@ input {
 
   .hamburger {
     display: block;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  input {
+    width: 100px;
   }
 }
 
