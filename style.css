@@ -139,38 +139,102 @@ header {
   color: rgb(0, 0, 0);
 }
 
-.foto-container {
-  height: 100vh;
+.anim-container {
+  display: flex;
+  height: 400px;
   width: 95%;
-  border: 2px solid red;
   margin: auto;
+}
+
+.grid-container {
+  height: 100%;
+  width: 50%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  /* grid-template-rows: 25% 25% 25% 25%;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-template-areas:
-    " 1 1 1 "
-    " 2 2 3 "
-    " 4 4 3 "
-    " 5 6 6 "; */
+    " un un un "
+    " deux deux trois "
+    " quatre quatre trois "
+    " cinq six six ";
 }
 
 #red {
-  background: red;
+  background: rgba(255, 64, 64, 0.77);
+  grid-area: un;
 }
 #blue {
-  background: blue;
+  background: rgba(58, 58, 255, 0.775);
+  grid-area: deux;
 }
 #green {
-  background: green;
+  background: rgba(38, 138, 38, 0.744);
+  grid-area: trois;
 }
 #pink {
-  background: pink;
+  background: rgba(251, 202, 210, 0.782);
+  grid-area: quatre;
 }
 #grey {
-  background: grey;
+  background: rgba(128, 128, 128, 0.777);
+  grid-area: cinq;
 }
 #orange {
-  background: orange;
+  background: rgba(255, 186, 57, 0.767);
+  grid-area: six;
+}
+
+.background-anim {
+  height: 100%;
+  width: 50%;
+  background: rgba(172, 255, 47, 0.684);
+  transform: scaleY(0);
+  animation: anim 15s 0.5s ease-in forwards alternate;
+  transform-origin: bottom;
+}
+
+footer {
+  height: 1000px;
+  width: 100vw;
+  border: 2px solid black;
+}
+
+form {
+  display: grid;
+  height: 100%;
+  width: 70%;
+  margin: auto;
+  grid-template-columns: 10% 10%;
+  grid-template-rows: 10% 80% 10%;
+  grid-template-areas:
+    "nom prenom"
+    "area area"
+    "submit submit";
+}
+
+textarea {
+  grid-area: area;
+  display: block;
+  margin: auto;
+  resize: none;
+}
+
+#nom {
+  grid-area: nom;
+}
+
+#prenom {
+  grid-area: prenom;
+}
+
+#submit {
+  grid-area: submit;
+}
+
+@keyframes anim {
+  100% {
+    transform: scaleY(1);
+  }
 }
 
 @media screen and (max-width: 1320px) {
