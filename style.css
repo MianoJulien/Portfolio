@@ -1,9 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #f7e6e6;
+}
 #gameContainer{
+    width: 80%;
+    margin: auto;
     text-align: center;
+    border: 2px solid black;
+
 }
 
 #gameBoard{
+    margin-top: 20px;
     border: 3px solid;
+    width: 80%;
 }
 
 #scoreText{
@@ -11,6 +25,7 @@
 }
 
 #resetButton{
+    margin-bottom: 20px;
     font-size: 22px;
     width: 100px;
     height: 50px;
