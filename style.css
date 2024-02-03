@@ -53,7 +53,7 @@ body{
 
 .arrow__up{
     position: absolute;
-    top: 25px;
+    top: 15px;
     left: 50%;
 }
 
@@ -71,7 +71,7 @@ body{
 
 .arrow__down{
     position: absolute;
-    top: 115px;
+    top: 125px;
     left: 50%;
 }
 
