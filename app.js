@@ -110,7 +110,7 @@ function changeDirection(event){
     const goingDown = (yVelocity == unitSize);
     const goingRight = (xVelocity == unitSize);
     const goingLeft = (xVelocity == -unitSize);
-
+    
     switch(true){
         case(keyPressed == LEFT && !goingRight):
             xVelocity = -unitSize;
@@ -128,27 +128,28 @@ function changeDirection(event){
             xVelocity = 0;
             yVelocity = unitSize;
             break;
-    }
-};
-
-function checkGameOver(){
-    switch(true){
-        case (snake[0].x < 0):
-            running = false;
-            break;
-        case (snake[0].x >= gameWidth):
-            running = false;
-            break;
-        case (snake[0].y < 0):
-            running = false;
-            break;
-        case (snake[0].y >= gameHeight):
-            running = false;
-            break;
-
-    }
+        } 
+    };
     
-    for(let i = 1; i < snake.length; i+=1){
+    
+    function checkGameOver(){
+        switch(true){
+            case (snake[0].x < 0):
+            running = false;
+            break;
+            case (snake[0].x >= gameWidth):
+                running = false;
+                break;
+                case (snake[0].y < 0):
+                    running = false;
+            break;
+            case (snake[0].y >= gameHeight):
+                running = false;
+                break;
+
+            }
+    
+            for(let i = 1; i < snake.length; i+=1){
         if(snake[i].x == snake[0].x && snake[i].y == snake[0].y){
             running = false;
         }
@@ -161,7 +162,7 @@ function displayGameOver(){
     context.textAlign = "center";
     context.fillText("GAME OVER !", gameWidth / 2, gameHeight /2);
     running = false;
-
+    
 };
 
 function resetGame(){
@@ -174,7 +175,58 @@ function resetGame(){
         {x:unitSize * 2, y:0},
         {x:unitSize, y:0},
         {x:0, y:0}
-    
+        
     ];
     gameStart();
 };
+
+const LEFT = 37;
+const UP = 38;
+const RIGHT = 39;
+const DOWN = 40;
+
+
+// Fonction pour changer la direction
+function changeDirection(direction) {
+  const goingUp = (yVelocity === -unitSize);
+  const goingDown = (yVelocity === unitSize);
+  const goingRight = (xVelocity === unitSize);
+  const goingLeft = (xVelocity === -unitSize);
+  
+  switch(true){
+      case(direction === LEFT && !goingRight):
+          xVelocity = -unitSize;
+          yVelocity = 0;
+          break;
+      case(direction === UP && !goingDown):
+          xVelocity = 0;
+          yVelocity = -unitSize;
+          break;
+      case(direction === RIGHT && !goingLeft):
+          xVelocity = unitSize;
+          yVelocity = 0;
+          break;
+      case(direction === DOWN && !goingUp):
+          xVelocity = 0;
+          yVelocity = unitSize;
+          break;
+  }
+}
+
+
+// Associer les gestionnaires d'événements aux boutons
+document.querySelector(".arrow.arrow__left").addEventListener("click", function() {
+  changeDirection(LEFT);
+});
+
+document.querySelector(".arrow.arrow__up").addEventListener("click", function() {
+  changeDirection(UP);
+});
+
+document.querySelector(".arrow.arrow__right").addEventListener("click", function() {
+  changeDirection(RIGHT);
+});
+
+document.querySelector(".arrow.arrow__down").addEventListener("click", function() {
+  changeDirection(DOWN);
+});

@@ -4,7 +4,7 @@
 }
 
 body{
-    background: #f7e6e6;
+    background: #ebe9e9;
 }
 
 #gameContainer{
@@ -50,25 +50,25 @@ body{
     transform: translate(-50%, -50%);
 }
 
-.up{
+.arrow__up{
     position: absolute;
     top: 25px;
     left: 50%;
 }
 
-.right{
+.arrow__right{
     position: absolute;
     top: 70px;
     left: 80%;
 }
 
-.down{
+.arrow__left{
     position: absolute;
     top: 70px;
     left: 20%;
 }
 
-.left{
+.arrow__down{
     position: absolute;
     top: 115px;
     left: 50%;
