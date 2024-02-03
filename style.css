@@ -25,14 +25,13 @@ body{
 }
 
 #scoreText{
-    font-size: 80px;
+    font-size: 60px;
 }
 
 #resetButton{
-    margin-bottom: 20px;
     font-size: 22px;
-    width: 100px;
-    height: 50px;
+    width: 80px;
+    height: 40px;
     border: 4px solid;
     border-radius: 15px;
     cursor: pointer;
@@ -41,7 +40,7 @@ body{
 .joystick{
     width: 150px;
     height: 150px;
-    margin: 50px auto;
+    margin: 40px auto;
     position: relative;
 }
 
